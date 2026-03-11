@@ -1,48 +1,49 @@
-# Name: Bank Account Manager
-# Purpose: Allow the user to manage a bank account through deposits, withdrawals, balance checks, and exiting the program.
-# Parameters: none
-# Return: none
+ATM Simulation
 
-1: Store the starting balance as $1,000.00 in a variable called balance.
+**Overview**
 
-2: Start a loop that continues until the user chooses E which would end the program.
+This project is a Python-based simulation of an Automated Teller Machine (ATM) that allows users to interact with a bank account through a command-line interface. The program starts with an initial balance and allows the user to perform common banking actions such as depositing money, withdrawing money, checking their balance, or exiting the program.
 
-3: Prompt the user to choose an any one of these action:
-    D - Deposit
-    W - Withdraw
-    B - Check Balance
-    E - Exit
-    - Make input uppercase and strip spaces before checking to make sure their are no errors with inputs.
-    - If input is not D, W, B, or E:
-        a. Print an error message telling the user what valid options are.
-        b. Reprompt without performing any action.
+The system runs in a loop so that users can perform multiple transactions during a single session. The program also includes error checking to handle invalid inputs and ensure that transactions are processed correctly.
 
-4: If the user chooses D (Deposit):
-    a. Ask the user how much they want to deposit.
-    b. Validate the deposit amount:
-        - If deposit_amount <= 0, print an error message and reprompt the action menu.
-        - If deposit_amount is not a number, print an error and reprompt the action menu.
-    c. Add deposit_amount to balance.
-    d. Print a confirmation showing the amount deposited and the new balance.
-    e. Return to Step 3.
+**Purpose**
 
-5: If the user chooses W (Withdraw):
-    a. Ask the user how much they want to withdraw.
-    b. Validate the withdrawal amount:
-        - If withdraw_amount <= 0, print an error message and reprompt the action menu.
-        - If withdraw_amount is not a number, print an error and reprompt the action menu.
-        - If withdraw_amount > balance, print an insufficient funds warning and reprompt the action menu.
-    c. Subtract withdraw_amount from balance.
-    d. Print a confirmation showing the amount withdrawn and the new balance.
-    e. If the new balance < 0, print a 5% interest warning.
-    f. Return to Step 3.
+The purpose of this project was to practice fundamental programming concepts such as loops, conditional statements, and input validation. It also focuses on designing programs that allow continuous user interaction while maintaining correct program flow and handling possible user errors.
 
-6: If the user chooses B (Balance):
-    a. Display the current balance formatted to 2 decimal places.
-    b. If balance < 0:
-        - Print a warning that a 5% interest charge is being applied to the account.
-    c. Return to Step 3.
+**Features**
 
-7: If the user chooses E (Exit):
-    a. Print a farewell message showing the final balance.
-    b. Break the loop and end the program.
+- Interactive command-line ATM interface
+- Users can:
+    - Deposit money
+    - Withdraw money
+    - Check account balance
+    - Exit the program
+- Continuous loop allowing multiple transactions
+- Error checking for invalid menu selections
+- Error checking for negative deposit or withdrawal amounts
+- Warning message if an account balance becomes negative
+
+**Program Behavior**
+
+The program begins with a starting balance of $1000. Users are presented with a menu of options and can select an action using the following commands:
+
+D - Deposit
+W - Withdraw
+B - Check Balance
+E - Exit
+
+After each transaction, the user is prompted again until they choose to exit the program.
+
+**Programming Concepts Used**
+
+This project demonstrates several important programming concepts:
+- Loops to allow continuous user interaction
+- Conditional statements (if, elif, else) to process user choices
+- User input and output using input() and print()
+- Error checking and input validation
+- Basic state management through tracking the account balance
+- Testing different program paths using test cases
+
+**What I Learned**
+
+Through this project, I learned how to construct programs that repeatedly interact with users using loops and menus. In collaboration with loops and menus, I practiced validating user input in these loops handling potential user errors which might mess with the code. Building this ATM simulation helped reinforce how conditional logic and loops can work together to manage a program that runs continuously until a specific exit condition is met. I really enjoyed the planning and processing in this project because it challeneged my knowledge of loops and error messages.
