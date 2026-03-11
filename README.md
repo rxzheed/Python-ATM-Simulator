@@ -1,1 +1,48 @@
-# Python-ATM-Simulator
+# Name: Bank Account Manager
+# Purpose: Allow the user to manage a bank account through deposits, withdrawals, balance checks, and exiting the program.
+# Parameters: none
+# Return: none
+
+1: Store the starting balance as $1,000.00 in a variable called balance.
+
+2: Start a loop that continues until the user chooses E which would end the program.
+
+3: Prompt the user to choose an any one of these action:
+    D - Deposit
+    W - Withdraw
+    B - Check Balance
+    E - Exit
+    - Make input uppercase and strip spaces before checking to make sure their are no errors with inputs.
+    - If input is not D, W, B, or E:
+        a. Print an error message telling the user what valid options are.
+        b. Reprompt without performing any action.
+
+4: If the user chooses D (Deposit):
+    a. Ask the user how much they want to deposit.
+    b. Validate the deposit amount:
+        - If deposit_amount <= 0, print an error message and reprompt the action menu.
+        - If deposit_amount is not a number, print an error and reprompt the action menu.
+    c. Add deposit_amount to balance.
+    d. Print a confirmation showing the amount deposited and the new balance.
+    e. Return to Step 3.
+
+5: If the user chooses W (Withdraw):
+    a. Ask the user how much they want to withdraw.
+    b. Validate the withdrawal amount:
+        - If withdraw_amount <= 0, print an error message and reprompt the action menu.
+        - If withdraw_amount is not a number, print an error and reprompt the action menu.
+        - If withdraw_amount > balance, print an insufficient funds warning and reprompt the action menu.
+    c. Subtract withdraw_amount from balance.
+    d. Print a confirmation showing the amount withdrawn and the new balance.
+    e. If the new balance < 0, print a 5% interest warning.
+    f. Return to Step 3.
+
+6: If the user chooses B (Balance):
+    a. Display the current balance formatted to 2 decimal places.
+    b. If balance < 0:
+        - Print a warning that a 5% interest charge is being applied to the account.
+    c. Return to Step 3.
+
+7: If the user chooses E (Exit):
+    a. Print a farewell message showing the final balance.
+    b. Break the loop and end the program.
