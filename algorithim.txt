@@ -1,6 +1,5 @@
 # Name: Bank Account Manager
-# Purpose: Allow the user to manage a bank account through deposits,
-#          withdrawals, balance checks, and exiting the program
+# Purpose: Allow the user to manage a bank account through deposits, withdrawals, balance checks, and exiting the program
 # Parameters: none
 # Return: none
 
